@@ -77,3 +77,10 @@ gd i gD przejdz do definicji zmiennej
 CTRL + [ - skok do deklaracji nazwy pod kursorem
 CTRL + T - powrot w stosie skokow
 
+cscope -b -R - zbierz baze cscope
+:cs find c [funkcja]- znajdz miejsca wywolania podanej funkcji
+:cs find g [nazwa] - znajdz podana definicje
+:cs find s [nazwa] - znajdz ten symbol
+przy odpowiednim konfigu .vimrc wyniki laduja w czym takim jak quickfix
+:cc [nr] przejscie do miejsca zdefiniowanego przez quickfix
+
