@@ -1,0 +1,79 @@
+h j k l - poruszanie sie po pliku
+^ $ - przejscie na podczatek i koniec linji
+'[ '] - skok do poczatku i konca pilku
+w b - przeskocznienie slowa , powrot o jedno slowo w lewo
+u - undo
+CTRL - R - reundo
+ma - dodanie znacznika a
+'a - skok do poczatku linji ze znacznikiem a
+`a - skok do dokladnego miejsca zdefiniowanego przez a
+
+i a - przejscie do edycji na/przed bierzaca pozycja
+o - dodanie nowej linji po bierzacej, SHIFT - O dodanie linji przed bierzaca
+x - kasowanie znaku
+c - kasowanie i przejscie do edycji
+cw - kasowanie slowa i edycja
+cc - kasowanie linji i przejscie od edycji
+dd - kasowanie linji (tylko kasowanie)
+3dd lub d3j kasowanie 3 linji
+df> - kasowanie wszystkiego az do znaku >
+SHIFT J - laczenie dwoch linji w jedna
+3J - laczenie 3 linji w jedna
+~ - zamiana malych liter na duze i vice versa
+9999~ - zamiana calej linji na duze znaki lub male znaki
+p - wklejanie usunietego textu (za kursorem)
+P - wklejanie usunietego tekstu (przed kursorem)
+xp dd-f<space>-p - kombinacje usun/wklej mozna szybko zamienic kolejnosc dwoch znakow / slow
+
+za pomoca znacznikow mozna wycinac i wklejac cale sekcje kodu np
+ma <- ustaw znacznik a
+przejdz do konca tekstu ktory chcesz usunac
+d'a <- usuwa sekcje tekstu od bierzacej pozycji do znacznika a
+istnieje tex mozliwosc kopiowania tekstu, aby skopiowac sekcje mozna
+sie posluzyc wkasnikiem przy czym ostatni krok trzeba wykonac jako:
+y'a <- kopiuje tekst do danego wskaznika
+p <- wkleja tekst w wybranym mijescu
+Mozna tez kopiowac tekst bez wskaznika przez wskazanie ilosci linji np:
+10yy <- kopiuj 10 linji od bierzacego miejsca
+v/V - przejscie do visual mode (z zaznaczaniem do znakow lub linji)
+CTRL + v - visual mode w trybie XY np do edycji tabel (w tym trybie edycja dziala na calym zakresie np mozna zmienic jedna litere w wielu linjach lub wstawic text w wielu linjach w tym samym miejscu)
+>> << - indenacja tekstu, szerokosc indenacji ustala sie poprzez et shiftwidth=2
+5>> lub >5j - przesowa 5 nastepnych linji, tekst mozna tez przesowac nie bedac w trybie visual
+= - automatyczna indenacja tekstu , np 5= indenuje 5 nastepnych linji, najlatwiej jednak poslugiwac sie nia w line visual mode
+
+q - makra !!! np makro na dodanie #include do kazdej linji
+qa <- rozpoczecie zapisywania do makra "a"
+$#inlcude "<ESC>^a"j <- dodanie ciagu #include przed i znaku " po
+zawartosci linji dodatkowo przejcie do nowej linji
+3@a - wykonaj makro "a" 3 razy
+plik1.h
+plik2.h
+plik3.h
+plik4.h
+
+:digraphs - wyswietla tablice digraphow
+CTRL + K - w trybie edycji pozwala na wstawienie digraphu np CTRL + K
++ 34 wstawia znak ¾
+
+/slowo - wyszukaj slowo
+?slowo - wyszukaj slowo (wstecz)
+? - odwroc kierunek przeszukiwania
+!<operacja przesuniecia kursora> - wywoluje polecenie powloki na przekazanym zakresie linji, np sortowanie (sort) lub filtrowanie (grep)
+!! - wywoluje polecenie powloki na bierzacej linji, mozna tez w ten sposob szybko wkleic do pliku cos co zwraca powloka, np liste plikow, lub bierzaca date (date)
+
+:split - pozwala podzielic okno vima an 2 edytory
+CTRL - Wj/k - pozwala przechodzic miedzy edytorami
+<num>CTRL - W + _ - pozwala zwiekszyc okno do danego rozmiaru
+
+[d i [D - pozwala podejrzec definicje define np stale (calkiem cool)
+[ + CTRL - I - skok do definicji
+gd i gD przejdz do definicji zmiennej
+% - przeskakuje miedzy parami znakow {} czy nawet parami #if #else (wow)
+>i{ - pozwala na indenacje calego zakresu od { do } o ile zostanie wydana wskazujac na nawias rozpoczynajacy
+:tag <nazwa> - pozwala skoczyc do deklaracji danej funkcji
+:stag <nazwa> lub CTRL + W + ] - otwiera nowy bufor i skacze do deklaracji funkcji
+:tag /<nazwa> - pozwala wyszukac tez bazujac na wyrazeniach regularych np :tag /read  - szuka jakiejkolwiek funkcji z read w nazwie, warto tez wyprubowac
+:tselect <nazwa> - wyswietla zamiast skakac
+CTRL + [ - skok do deklaracji nazwy pod kursorem
+CTRL + T - powrot w stosie skokow
+
