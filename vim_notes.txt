@@ -24,6 +24,7 @@ SHIFT J - laczenie dwoch linji w jedna
 p - wklejanie usunietego textu (za kursorem)
 P - wklejanie usunietego tekstu (przed kursorem)
 xp dd-f<space>-p - kombinacje usun/wklej mozna szybko zamienic kolejnosc dwoch znakow / slow
+:%s/foo/bar/g - zamienia wszystkie wystapienia foo na bar
 
 za pomoca znacznikow mozna wycinac i wklejac cale sekcje kodu np
 ma <- ustaw znacznik a
@@ -62,8 +63,14 @@ CTRL + K - w trybie edycji pozwala na wstawienie digraphu np CTRL + K
 !! - wywoluje polecenie powloki na bierzacej linji, mozna tez w ten sposob szybko wkleic do pliku cos co zwraca powloka, np liste plikow, lub bierzaca date (date)
 
 :split - pozwala podzielic okno vima an 2 edytory
+:s - to samo
+:vs - dzielenie poziome (bardziej przydatne bo nie ograniczamy widoku w pionie a mozna zawsze okno w poziomie rozciagnac
 CTRL - Wj/k - pozwala przechodzic miedzy edytorami
 <num>CTRL - W + _ - pozwala zwiekszyc okno do danego rozmiaru
+:buffers lub :ls - wyswietla liste aktualnie wczytanych buforow (otwartych plikow)
+:buffer <bum - przelacza bierzace okno do danego bufora
+<Ctrl + ^> lub <Ctrl - 6> - przelacza pomiedzy bierzacym a ostanio otwartym buforem w danym oknie
+:nnoremap <F5> :buffers<CR>:buffer<Space> - pod komenda F5 umieszczamy skrot do wyswietlania listy otwartych buforow
 
 [d i [D - pozwala podejrzec definicje define np stale (calkiem cool)
 [ + CTRL - I - skok do definicji
