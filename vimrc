@@ -11,7 +11,6 @@
 :set mouse=c
 :syntax on
 :nnoremap <F5> :buffers<CR>:buffer<Space>
-:vs
 
 if has("cscope")
  set csprg=/usr/bin/cscope
