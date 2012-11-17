@@ -6,6 +6,7 @@
 :set expandtab
 :set tabstop=8
 :set shiftwidth=2
+:set nowrap
 :set laststatus=2
 :set cscopequickfix=s-,c-,d-,i-,t-,e-,g-
 :set mouse=c
