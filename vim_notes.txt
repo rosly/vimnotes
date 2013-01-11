@@ -67,10 +67,12 @@ CTRL + K - w trybie edycji pozwala na wstawienie digraphu np CTRL + K
 :vs - dzielenie poziome (bardziej przydatne bo nie ograniczamy widoku w pionie a mozna zawsze okno w poziomie rozciagnac
 CTRL - Wj/k - pozwala przechodzic miedzy edytorami
 <num>CTRL - W + _ - pozwala zwiekszyc okno do danego rozmiaru
-:buffers lub :ls - wyswietla liste aktualnie wczytanych buforow (otwartych plikow)
+:ls lub :buffers - wyswietla liste aktualnie wczytanych buforow (otwartych plikow)
 :buffer <bum - przelacza bierzace okno do danego bufora
 <Ctrl + ^> lub <Ctrl - 6> - przelacza pomiedzy bierzacym a ostanio otwartym buforem w danym oknie
 :nnoremap <F5> :buffers<CR>:buffer<Space> - pod komenda F5 umieszczamy skrot do wyswietlania listy otwartych buforow
+:bd - zamyka bierzacy bufor (np lewy lub prawy otwarty po :vs)i
+:1bw - zamyka bufor nr 1
 
 [d i [D - pozwala podejrzec definicje define np stale (calkiem cool)
 [ + CTRL - I - skok do definicji
