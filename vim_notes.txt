@@ -58,6 +58,8 @@ CTRL + K - w trybie edycji pozwala na wstawienie digraphu np CTRL + K
 
 /slowo - wyszukaj slowo
 ?slowo - wyszukaj slowo (wstecz)
+:%s/foo/bar/g - wyszukaj foo i zastap przez bar
+:s/foo/bar/g - zastepowanie tylko w bierzacej linji
 ? - odwroc kierunek przeszukiwania
 !<operacja przesuniecia kursora> - wywoluje polecenie powloki na przekazanym zakresie linji, np sortowanie (sort) lub filtrowanie (grep)
 !! - wywoluje polecenie powloki na bierzacej linji, mozna tez w ten sposob szybko wkleic do pliku cos co zwraca powloka, np liste plikow, lub bierzaca date (date)
