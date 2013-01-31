@@ -19,6 +19,7 @@ dd - kasowanie linji (tylko kasowanie)
 df> - kasowanie wszystkiego az do znaku >
 SHIFT J - laczenie dwoch linji w jedna
 3J - laczenie 3 linji w jedna
+1gq - automatyczne zawijanie / dzielenie bierzacej linji
 ~ - zamiana malych liter na duze i vice versa
 9999~ - zamiana calej linji na duze znaki lub male znaki
 p - wklejanie usunietego textu (za kursorem)
